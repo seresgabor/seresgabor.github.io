@@ -1,2 +1,2 @@
-# seresgabor.github.io
-Demo page
+# lotto
+JavaScript exercise 

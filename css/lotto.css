@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url(https://allfont.net/allfont.css?fonts=roboto-light);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2a2e3f;
+    min-width: 400px;
+}
+
+.title {
+    border-bottom: 2px solid hsla(0,0%,100%,.25);
+   }
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#clear-screen {
+    display: block;
+    margin: 0 auto 20px;
+    width: 200px;
+    background-color: #00a769;
+    color: white;
+    font-size: 18px;
+    line-height: 33px;
+    letter-spacing: 4px;
+    font-family: 'Roboto Light', arial;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 8px;
+    
+}
+
+#clear-screen:hover {
+    background-color: #eb0f42;
+}
+
+.banners {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.banners > div {
+    margin: 20px 10px;
+    }
+
+.banners img:hover {
+    cursor: pointer;
+}
+
+.display {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.display span {
+    color: white;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 5px 7px;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 33px;
+    font-family: 'Roboto Light', arial;
+    font-weight: 700;
+    font-size: 14px;
+}
