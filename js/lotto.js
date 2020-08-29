@@ -1,4 +1,4 @@
-let showNumbers = function (winners,ballColor) {
+function showNumbers(winners,ballColor) {
     //console.log("A nyerő számok emelkedő számsorrendben:", winners.toString());
     let parentDiv = document.querySelector(".container");
     let displayDiv = document.createElement("div");
@@ -10,11 +10,11 @@ let showNumbers = function (winners,ballColor) {
         displayDiv.appendChild(span);
         span.innerHTML = winners[i];
         span.style.backgroundColor = ballColor;
-    }
+    };
 }
 
 
-let createWinners = function(win,num,ballColor) {
+function createWinners(win,num,ballColor) {
     let numbers = [];
     for (let i=0; i<num; i++) {
         numbers[i] = i+1;
