@@ -3,7 +3,7 @@ function showNumbers(winners,ballColor) {
     let parentDiv = document.querySelector(".container");
     let displayDiv = document.createElement("div");
     displayDiv.className = "display";
-    parentDiv.appendChild(displayDiv);
+    parentDiv.insertAdjacentElement("afterbegin", displayDiv);
     
     for (let number of winners) {
         let span = document.createElement("span");
