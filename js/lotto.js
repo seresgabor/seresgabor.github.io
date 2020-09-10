@@ -5,10 +5,10 @@ function showNumbers(winners,ballColor) {
     displayDiv.className = "display";
     parentDiv.appendChild(displayDiv);
     
-    for (let i=0; i<winners.length; i++) {
+    for (let number of winners) {
         let span = document.createElement("span");
         displayDiv.appendChild(span);
-        span.innerHTML = winners[i];
+        span.innerHTML = number;
         span.style.backgroundColor = ballColor;
     };
 }
