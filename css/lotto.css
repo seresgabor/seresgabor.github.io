@@ -20,10 +20,11 @@ body {
 
 h3 {
     font-family: 'Oswald', sans-serif;
-    font-size: 2em;
+    font-size: 5vh;
     font-weight: 500;
     color: #FFFFFF;
     text-align: center;
+    margin: 2vh;
 }
 .clear {
     display: block;
@@ -45,6 +46,7 @@ h3 {
     right: 2vw;
     max-width: 165px;
     min-width: 90px;
+    min-height: 23px;
     width: 20vw;
     background-color: #00a769;
     color: white;
@@ -67,7 +69,7 @@ h3 {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-flow: ;
+    flex-flow: nowrap;
     justify-content: space-around;
     position: sticky;
     top: 0;
@@ -87,6 +89,8 @@ h3 {
 .banners img {
     width: 23vw;
     max-width: 200px;
+    min-width: 85px;
+    
 }
 .banners img:hover {
     cursor: pointer;
