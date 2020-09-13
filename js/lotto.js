@@ -3,18 +3,37 @@ function showNumbers(winners,ballColor) {
     let parentDiv = document.querySelector(".container");
     let displayDiv = document.createElement("div");
     displayDiv.className = "display";
-    parentDiv.insertAdjacentElement("afterbegin", displayDiv);
     
     for (let number of winners) {
         let span = document.createElement("span");
-        displayDiv.appendChild(span);
         span.innerHTML = number;
         span.style.backgroundColor = ballColor;
+        displayDiv.appendChild(span);
     };
+    
+    parentDiv.insertAdjacentElement("afterbegin", displayDiv);
 }
 
+// Craeting winners array by includes() method.
 
-function createWinners(win,num,ballColor) {
+function createWinners(win, num, ballColor) {
+    let winners = [];
+    for (let i=0; i<win; i++) {
+        let rand = Math.ceil(Math.random()*num);
+        if (winners.includes(rand)) {
+            i--;
+        }else {
+            winners[i] = rand;
+        };
+    };
+    winners = winners.sort((a,b) => a-b);
+
+    showNumbers(winners, ballColor);
+}
+
+//Creating winners array by splicing numbers array.
+
+/* function createWinners(win,num,ballColor) {
     let numbers = [];
     for (let i=0; i<num; i++) {
         numbers[i] = i+1;
@@ -27,7 +46,7 @@ function createWinners(win,num,ballColor) {
     winners = winners.sort((a,b) => a-b);
     
     showNumbers(winners,ballColor);
-}
+} */
 
 document.getElementById("banner5").addEventListener("click", function() {
     let ballColor = "#00a769";
@@ -46,7 +65,8 @@ document.getElementById("banner7").addEventListener("click", function() {
 
 document.getElementById("clear-screen").addEventListener("click", function() {
     let containerDiv = document.querySelector(".container");
-    while (containerDiv.hasChildNodes()) {
+    /* while (containerDiv.hasChildNodes()) {
         containerDiv.removeChild(containerDiv.firstChild);
-    };
+    }; */
+    containerDiv.innerHTML = "";
 });
