@@ -14,7 +14,7 @@ function showNumbers(winners,ballColor) {
     parentDiv.insertAdjacentElement("afterbegin", displayDiv);
 }
 
-// Craeting winners array by includes() method.
+// Craeting winners array by means of includes() method.
 
 function createWinners(win, num, ballColor) {
     let winners = [];
