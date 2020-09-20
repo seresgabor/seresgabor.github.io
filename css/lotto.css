@@ -43,27 +43,37 @@ h3 {
     }
 
 .banners button {
-    background-color: #2a2e3f;
     border: none;
     outline: none;
     padding: 0;
+    opacity: .8;
+    transition: 300ms;
+ 
+    
 }
+
 .banners img {
     width: 32vw;
     height: auto;
     max-width: 200px;
-    max-height: 73px
-    
-    
+    max-height: 73px;
+    display: block;
+       
 }
-.banners img:hover {
+.banners button:hover {
     cursor: pointer;
-}
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+    
+    }
+
+
 
 .display {
-    max-width: 1000px;
+    max-width: 330px;
     margin: 0 auto;
     text-align: center;
+   
 }
 
 .display span {
@@ -78,6 +88,11 @@ h3 {
     font-family: 'Roboto Light', arial;
     font-weight: 700;
     font-size: 14px;
+    transition: 400ms;
+}
+
+.display:hover span{
+    transform: scale(1.2,1.2);
 }
 
 .clear {
@@ -109,6 +124,7 @@ h3 {
     text-transform: uppercase;
     border-radius: 8px;
     outline: none;
+    transition: 700ms;
 }
 
 #clear-screen:hover {
