@@ -16,14 +16,47 @@ body {
 
 }
 
+.hamburger {
+    height: auto;
+    width: 28px;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+}
+
+.hamburger span {
+    display: block;
+    background: rgba(255, 255, 255, .8);
+    height: 2px;
+    transition: 250ms ease-out;
+    transform-origin: right;
+}
+
+.hamburger span:nth-child(2) {
+    margin: 8px 0;
+}
+
+.hamburger:hover span:first-child {
+    transform: rotate(-45deg);
+}
+
+.hamburger:hover span:last-child {
+    transform: rotate(45deg);
+}
+
+.hamburger:hover span:nth-child(2) {
+    transform: scale(0);
+}
+
 
 h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 5vh;
     font-weight: 500;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, .8);
     text-align: center;
     margin: 2vh;
+    
 }
 
 .banners {
@@ -36,6 +69,8 @@ h3 {
     top: 0;
     left: 0;
     right: 0;
+
+    z-index: 1;
 }
 
 .banners > div {
@@ -46,6 +81,7 @@ h3 {
     border: none;
     outline: none;
     padding: 0;
+    margin: 0;
     opacity: .8;
     transition: 300ms;
  
@@ -53,19 +89,20 @@ h3 {
 }
 
 .banners img {
-    width: 32vw;
+    width: 31vw;
     height: auto;
     max-width: 200px;
     max-height: 73px;
     display: block;
        
 }
+
 .banners button:hover {
     cursor: pointer;
     opacity: 1;
-    transform: scale(1.05, 1.05);
+    transform: scale(1.05);
     
-    }
+}
 
 
 
@@ -73,7 +110,10 @@ h3 {
     max-width: 330px;
     margin: 0 auto;
     text-align: center;
-   
+}
+
+.display:last-child {
+    padding-bottom: 10vh;
 }
 
 .display span {
@@ -89,10 +129,12 @@ h3 {
     font-weight: 700;
     font-size: 14px;
     transition: 400ms;
+
+    z-index: -10;
 }
 
 .display:hover span{
-    transform: scale(1.2,1.2);
+    transform: scale(1.5);
 }
 
 .clear {
@@ -113,26 +155,46 @@ h3 {
 }
 
 #clear-screen {
+    position: relative;
     margin: 0 25px;
     background-color: #00a769;
-    color: white;
-    padding: 5px 10px;
+    color: rgba(255, 255, 255, .8);
+    padding: .3rem .7rem;
     font-size: 2.3vh;
     letter-spacing: 4px;
     font-family: 'Roboto Light', arial;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 8px;
+    border-radius: 2px;
+    border: none;
     outline: none;
-    transition: 700ms;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    
+    z-index: 1;
 }
 
-#clear-screen:hover {
-    background-color: #eb0f42;
+#clear-screen::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background: #eb0f42;
+    z-index: -1;
+    transition: 250ms ease-in;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+#clear-screen:hover::after {
+    transform: scaleY(1);
+    transform-origin: bottom;
 }
 
 @media only screen and (max-width: 823px) and (orientation: landscape) {
-    .title {
+    .title, .hamburger{
         display: none;
     }
     
