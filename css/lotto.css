@@ -11,6 +11,7 @@ body {
     margin: 0;
 }
 
+
 .title {
     border-bottom: 2px solid hsla(0,0%,100%,.25);
     
@@ -131,8 +132,7 @@ h3 {
        
 }
 
-.banners button:hover,
-.banners button:focus {
+.banners button:hover {
     cursor: pointer;
     opacity: 1;
     transform: scale(1.05);
@@ -180,7 +180,6 @@ h3 {
 }
 
 .clear {
-   
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2vh 0;
     position: fixed;
@@ -233,8 +232,7 @@ h3 {
     cursor: pointer;
 }
 
-#clear-screen:hover::after,
-#clear-screen:focus::after {
+#clear-screen:hover::after {
     transform: scaleY(1);
     transform-origin: top;
 }
